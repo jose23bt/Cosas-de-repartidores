@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -11,9 +11,9 @@ import CheckoutPage from './components/Checkout/CheckoutPage';
 import EarningsCalculator from './pages/Pagos/Pagos';
 
 function App() {
-  return (
-    <Router>
+  return (    
       <div className="App">
+        <BrowserRouter>
         <Header />        
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -24,8 +24,8 @@ function App() {
             <Route path="/Pagos" element={<EarningsCalculator />} />
           </Routes>        
         <Footer />
-      </div>
-    </Router>
+        </BrowserRouter>
+      </div>    
   );
 }
 
