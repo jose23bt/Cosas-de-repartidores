@@ -11,21 +11,23 @@ import CheckoutPage from './components/Checkout/CheckoutPage';
 import EarningsCalculator from './pages/Pagos/Pagos';
 
 function App() {
-  return (    
-      <div className="App">
-        <BrowserRouter>
-        <Header />        
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/Blog" element={<BlogPage />} />
-            <Route path="/Loans" element={<LoanPage />} />
-            <Route path="/Checkout" element={<CheckoutPage />} />
-            <Route path="/Faq" element={<FAQ />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/loans" element={<LoanPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="/Pagos" element={<EarningsCalculator />} />
-          </Routes>        
+          </Routes>
+        </main>
         <Footer />
-        </BrowserRouter>
-      </div>    
+      </BrowserRouter>
+    </div>
   );
 }
 

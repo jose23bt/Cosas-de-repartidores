@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
                 <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                     <ul>
-                        <li><NavLink to="/" exact activeClassName="active">Inicio</NavLink></li>
+                        <li><NavLink to="/" exact="true" activeClassName="active">Inicio</NavLink></li>
                         <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li>
                         <li><NavLink to="/loans" activeClassName="active">Adelantos</NavLink></li>
                         <li><NavLink to="/Pagos" activeClassName="active">Simulador de Ganancias</NavLink></li>
@@ -35,4 +35,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
