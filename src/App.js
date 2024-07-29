@@ -17,10 +17,10 @@ function App() {
         <Header />        
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/loans" element={<LoanPage />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/faq" element={<FAQ />} />
+            <Route path="/Blog" element={<BlogPage />} />
+            <Route path="/Loans" element={<LoanPage />} />
+            <Route path="/Checkout" element={<CheckoutPage />} />
+            <Route path="/Faq" element={<FAQ />} />
             <Route path="/Pagos" element={<EarningsCalculator />} />
           </Routes>        
         <Footer />
