@@ -1,0 +1,102 @@
+/* LoanPage.css */
+
+/* Estilo para la página de préstamo */
+.loan-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin: 40px ;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin: 15px;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-group input[type="radio"] {
+    margin-right: 9px;
+}
+
+.input-group input {
+    width: 100%;
+    font-size: 34px;
+    border: none;
+    background: transparent;
+    text-align: center;
+}
+
+.options-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options-group label {
+    display: flex;
+    align-items: center;
+    margin-left: 9%;
+}
+
+.result-box {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.result-box p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.result-box button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.result-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-section, .result-box {
+        flex: 1;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,52 @@
+.faq-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h2 {
+    font-size: 1.5em;
+}
+
+.faq-item p {
+    font-size: 1em;
+}
+
+.faq-item ol {
+    margin: 10px 0;
+}
+
+.local-list {
+    margin-top: 10px;
+}
+
+.local-list h3 {
+    font-size: 1.2em;
+}
+
+.local-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.local-list ul li {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
