@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.css'; // Asegúrate de crear un archivo CSS para los estilos
 
 const Header = () => {
@@ -16,11 +17,11 @@ const Header = () => {
                 </div>
                 <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/loans">Adelantos</a></li>                        
-                        <li><a href="/Pagos">Simulador de Ganancias</a></li>
-                        <li><a href="/faq">FAQ</a></li>
+                        <li><NavLink to="/" exact activeClassName="active">Inicio</NavLink></li>
+                        <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li>
+                        <li><NavLink to="/loans" activeClassName="active">Adelantos</NavLink></li>
+                        <li><NavLink to="/Pagos" activeClassName="active">Simulador de Ganancias</NavLink></li>
+                        <li><NavLink to="/faq" activeClassName="active">FAQ</NavLink></li>
                     </ul>
                 </nav>
                 <button className="menu-toggle" onClick={toggleMenu}>
@@ -34,3 +35,4 @@ const Header = () => {
 };
 
 export default Header;
+
