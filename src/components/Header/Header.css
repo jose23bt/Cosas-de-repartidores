@@ -1,62 +1,62 @@
 /* Estilos generales del header */
 .header {
-    background-color: #282c34;
-    color: white;
-    padding: 10px 20px;
-    position: relative;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo h1 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
+  background-color: #282c34;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav li {
-    margin: 0 15px;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-  }
-  
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .menu-icon {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 6px 0;
-  }
-  
-  /* Estilos para móviles */
-  @media (max-width: 768px) {
-    .nav {
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -71,35 +71,34 @@
       z-index: 1000; /* Asegúrate de que el menú esté sobre otros elementos */
       transition: transform 0.3s ease;
       transform: translateY(-100%); /* Inicialmente oculta el menú fuera de la vista, desde la parte superior */
-    }
-  
-    .nav-open {
+  }
+
+  .nav-open {
       transform: translateY(0); /* Muestra el menú al abrir */
-    }
-  
-    .nav ul {
+  }
+
+  .nav ul {
       flex-direction: column;
       width: 100%; /* Ocupa todo el ancho de la pantalla */
       padding: 0;
       margin: 0;
-    }
-  
-    .nav li {
+  }
+
+  .nav li {
       margin: 10px 0;
       text-align: center; /* Centra el texto dentro del elemento */
-    }
-  
-    .nav a {
+  }
+
+  .nav a {
       color: white;
       text-decoration: none;
       font-size: 1.5em; /* Ajusta el tamaño de fuente para mejor visibilidad */
       padding: 15px;
       display: block;
-    }
-  
-    .menu-toggle {
+  }
+
+  .menu-toggle {
       display: block;
       z-index: 1001; /* Asegúrate de que el botón esté sobre el menú */
-    }
   }
-  
+}
