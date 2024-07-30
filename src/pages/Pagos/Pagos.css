@@ -1,55 +1,132 @@
 .calculator-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.calculator-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.options-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;    
+  padding: 0px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.earnings {
+  min-width: 250px;
+  max-width: 800px;  
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block; 
+  font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group input[type="range"] {
+  width: 80%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.input-group input[type="range"] {  
+  background: #ddd;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: 5px;
+  outline: none;
+}
+
+.input-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-group input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.radio-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.horizontal-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.horizontal-group label,
+.horizontal-group select {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .calculator-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
   }
-  
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .input-group input, .input-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+
+  .options-container,
   .earnings {
-    margin-top: 20px;
-  }
-  
-  .earnings-section {
+    margin-right: 0;
     margin-bottom: 20px;
   }
-  
-  .earnings-detail p {
-    margin: 5px 0;
+
+  .input-group {
+    flex-direction: column;
   }
-  
-  hr {
-    border: 1px solid #ddd;
-    margin: 10px 0;
+
+  .horizontal-group {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .total-earnings {
-    margin-top: 20px;
-  }
-  
-  h2, h3 {
-    color: #333;
-  }
-  
-  h3 {
-    margin: 10px 0;
-  }
-  
+}

@@ -3,8 +3,8 @@ import React from 'react';
 function HomePage() {
     return (
         <div>
-            <h1>Bienvenidos al Blog de Repartidores</h1>
-            <p>¡Estamos trabajando para ofrecerte el mejor contenido!</p>
+            <h1>Qlq marico no hay nada aqui todavia</h1>
+            <p>ve de regreso al a pagos porque no hay mas nada :)</p>
         </div>
     );
 }
