@@ -48,6 +48,7 @@ const EarningsCalculator = () => {
         return rate.rate;
       }
     }
+    return 0; // Si no coincide con ningún rango
   };
 
   const calculateDayEarnings = () => {
@@ -57,15 +58,20 @@ const EarningsCalculator = () => {
     const kmToPickupRate = getRate(kmToPickup, kmRates.toPickup);
     const kmToDeliveryRate = getRate(kmToDelivery, kmRates.toDelivery);
 
-    const baseEarnings = (dayRates.pickup * deliveriesDay +
-                          dayRates.delivery * deliveriesDay +
-                          kmToPickupRate * deliveriesDay +
-                          kmToDeliveryRate * deliveriesDay +
-                          hoursDay * 15); // Añadido por publicidad
+    const baseEarnings = (
+      dayRates.pickup * deliveriesDay +
+      dayRates.delivery * deliveriesDay +
+      kmToPickupRate * deliveriesDay +
+      kmToDeliveryRate * deliveriesDay +
+      hoursDay * 15 // Añadido por publicidad
+    );
 
     const groupRate = groupRates[group];
-    const groupEarnings = (groupRate.delivery * deliveriesDay +
-                           groupRate.km * deliveriesDay);
+    const totalKm = kmToPickup * deliveriesDay + kmToDelivery * deliveriesDay;
+    const groupEarnings = (
+      groupRate.delivery * deliveriesDay +
+      groupRate.km * totalKm
+    );
 
     return {
       baseEarnings: baseEarnings.toFixed(2),
@@ -81,15 +87,20 @@ const EarningsCalculator = () => {
     const kmToPickupRate = getRate(kmToPickup, kmRates.toPickup);
     const kmToDeliveryRate = getRate(kmToDelivery, kmRates.toDelivery);
 
-    const baseEarnings = (nightRates.pickup * deliveriesNight +
-                          nightRates.delivery * deliveriesNight +
-                          kmToPickupRate * deliveriesNight +
-                          kmToDeliveryRate * deliveriesNight +
-                          hoursNight * 15); // Añadido por publicidad
+    const baseEarnings = (
+      nightRates.pickup * deliveriesNight +
+      nightRates.delivery * deliveriesNight +
+      kmToPickupRate * deliveriesNight +
+      kmToDeliveryRate * deliveriesNight +
+      hoursNight * 15 // Añadido por publicidad
+    );
 
     const groupRate = groupRates[group];
-    const groupEarnings = (groupRate.delivery * deliveriesNight +
-                           groupRate.km * deliveriesNight);
+    const totalKm = kmToPickup * deliveriesNight + kmToDelivery * deliveriesNight;
+    const groupEarnings = (
+      groupRate.delivery * deliveriesNight +
+      groupRate.km * totalKm
+    );
 
     return {
       baseEarnings: baseEarnings.toFixed(2),
@@ -115,7 +126,7 @@ const EarningsCalculator = () => {
     const totalDeliveries = parseInt(deliveriesDay) + parseInt(deliveriesNight);
     let totalTips = 0;
     for (let i = 0; i < totalDeliveries; i++) {
-      const tip = Math.floor(Math.random() * 200) + 20; // Genera propinas entre 50 y 1500
+      const tip = Math.floor(Math.random() * 220) + 10; // Genera propinas entre 50 y 1500
       totalTips += tip;
     }
     setTips(totalTips);
@@ -124,9 +135,17 @@ const EarningsCalculator = () => {
   const dayEarnings = calculateDayEarnings();
   const nightEarnings = calculateNightEarnings();
 
-  const totalBaseEarnings = (parseFloat(dayEarnings.baseEarnings) + parseFloat(nightEarnings.baseEarnings)).toFixed(2);
-  const totalGroupEarnings = (parseFloat(dayEarnings.groupEarnings) + parseFloat(nightEarnings.groupEarnings)).toFixed(2);
-  const totalEarnings = (parseFloat(dayEarnings.totalEarnings) + parseFloat(nightEarnings.totalEarnings) + (simulateTips ? tips : 0)).toFixed(2);
+  const totalBaseEarnings = (
+    parseFloat(dayEarnings.baseEarnings) + parseFloat(nightEarnings.baseEarnings)
+  ).toFixed(2);
+  const totalGroupEarnings = (
+    parseFloat(dayEarnings.groupEarnings) + parseFloat(nightEarnings.groupEarnings)
+  ).toFixed(2);
+  const totalEarnings = (
+    parseFloat(dayEarnings.totalEarnings) +
+    parseFloat(nightEarnings.totalEarnings) +
+    (simulateTips ? tips : 0)
+  ).toFixed(2);
   
   return (
     <div className="calculator-container">
