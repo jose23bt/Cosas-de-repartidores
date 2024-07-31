@@ -2,7 +2,7 @@
   "name": "peya",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jose23bt.github.io/Blog",
+  "homepage": "https://jose23bt.github.io/Cosas-de-repartidores",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
