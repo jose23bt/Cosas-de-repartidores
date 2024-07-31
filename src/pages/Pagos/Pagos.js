@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Pagos.css';
 
 const EarningsCalculator = () => {
+  // Estado para manejar las entradas del usuario
   const [hoursDay, setHoursDay] = useState(0);
   const [deliveriesDay, setDeliveriesDay] = useState(0);
   const [hoursNight, setHoursNight] = useState(0);
@@ -13,13 +14,15 @@ const EarningsCalculator = () => {
   const [simulateTips, setSimulateTips] = useState(false);
   const [tips, setTips] = useState(0);
 
+  // Tarifas básicas según el día y la noche
   const rates = {
-    weekdayDay: { pickup: 400, delivery: 210 },
-    weekdayNight: { pickup: 500, delivery: 300 },
-    weekendNight: { pickup: 750, delivery: 450 },
-    weekendDay: { pickup: 450, delivery: 290 },
+    weekdayDay: { pickup: 360, delivery: 170 },
+    weekdayNight: { pickup: 460, delivery: 240 },
+    weekendNight: { pickup: 670, delivery: 370 },
+    weekendDay: { pickup: 400, delivery: 240 },
   };
 
+  // Tarifas por kilómetro
   const kmRates = {
     toPickup: [
       { maxKm: 1.5, rate: 120 },
@@ -35,6 +38,7 @@ const EarningsCalculator = () => {
     ],
   };
 
+  // Tarifas de grupo
   const groupRates = {
     1: { delivery: 150, km: 25 },
     2: { delivery: 100, km: 20 },
@@ -42,21 +46,26 @@ const EarningsCalculator = () => {
     4: { delivery: 40, km: 8 },
   };
 
+  // Función para obtener la tarifa según los kilómetros
   const getRate = (km, rates) => {
     for (let rate of rates) {
       if (km <= rate.maxKm) {
         return rate.rate;
       }
     }
-    return 0; // Si no coincide con ningún rango
+    return 0;
   };
 
+  // Función para calcular las ganancias diurnas
   const calculateDayEarnings = () => {
     const dayKey = dayType === 'weekend' ? 'weekend' : 'weekday';
     const dayRates = rates[dayKey + 'Day'];
 
-    const kmToPickupRate = getRate(kmToPickup, kmRates.toPickup);
-    const kmToDeliveryRate = getRate(kmToDelivery, kmRates.toDelivery);
+    const avgKmToPickup = kmToPickup / deliveriesDay;
+    const avgKmToDelivery = kmToDelivery / deliveriesDay;
+
+    const kmToPickupRate = getRate(avgKmToPickup, kmRates.toPickup);
+    const kmToDeliveryRate = getRate(avgKmToDelivery, kmRates.toDelivery);
 
     const baseEarnings = (
       dayRates.pickup * deliveriesDay +
@@ -67,10 +76,9 @@ const EarningsCalculator = () => {
     );
 
     const groupRate = groupRates[group];
-    const totalKm = kmToPickup * deliveriesDay + kmToDelivery * deliveriesDay;
     const groupEarnings = (
       groupRate.delivery * deliveriesDay +
-      groupRate.km * totalKm
+      groupRate.km * (avgKmToPickup + avgKmToDelivery) * deliveriesDay
     );
 
     return {
@@ -80,12 +88,16 @@ const EarningsCalculator = () => {
     };
   };
 
+  // Función para calcular las ganancias nocturnas
   const calculateNightEarnings = () => {
     const nightKey = dayType === 'weekend' ? 'weekend' : 'weekday';
     const nightRates = rates[nightKey + 'Night'];
 
-    const kmToPickupRate = getRate(kmToPickup, kmRates.toPickup);
-    const kmToDeliveryRate = getRate(kmToDelivery, kmRates.toDelivery);
+    const avgKmToPickup = kmToPickup / deliveriesNight;
+    const avgKmToDelivery = kmToDelivery / deliveriesNight;
+
+    const kmToPickupRate = getRate(avgKmToPickup, kmRates.toPickup);
+    const kmToDeliveryRate = getRate(avgKmToDelivery, kmRates.toDelivery);
 
     const baseEarnings = (
       nightRates.pickup * deliveriesNight +
@@ -96,10 +108,9 @@ const EarningsCalculator = () => {
     );
 
     const groupRate = groupRates[group];
-    const totalKm = kmToPickup * deliveriesNight + kmToDelivery * deliveriesNight;
     const groupEarnings = (
       groupRate.delivery * deliveriesNight +
-      groupRate.km * totalKm
+      groupRate.km * (avgKmToPickup + avgKmToDelivery) * deliveriesNight
     );
 
     return {
@@ -109,6 +120,7 @@ const EarningsCalculator = () => {
     };
   };
 
+  // Función para manejar cambios en las horas trabajadas
   const handleHoursChange = (setter, value, otherValue) => {
     const totalHours = parseInt(value) + parseInt(otherValue);
     if (totalHours <= 12) {
@@ -118,10 +130,12 @@ const EarningsCalculator = () => {
     }
   };
 
+  // Función para manejar cambios en los rangos
   const handleRangeChange = (setter, value) => {
     setter(value);
   };
 
+  // Función para generar propinas aleatorias
   const generateTips = () => {
     const totalDeliveries = parseInt(deliveriesDay) + parseInt(deliveriesNight);
     let totalTips = 0;
@@ -132,9 +146,11 @@ const EarningsCalculator = () => {
     setTips(totalTips);
   };
 
+  // Calcular las ganancias diurnas y nocturnas
   const dayEarnings = calculateDayEarnings();
   const nightEarnings = calculateNightEarnings();
 
+  // Calcular las ganancias totales
   const totalBaseEarnings = (
     parseFloat(dayEarnings.baseEarnings) + parseFloat(nightEarnings.baseEarnings)
   ).toFixed(2);
