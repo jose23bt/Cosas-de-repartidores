@@ -29,6 +29,14 @@ const Directorio = () => {
                 economicLevel: 6, // Nivel económico del 1 al 10, se representará con 6 símbolos de $
                 history: 'Una vez joseito intento contactarlo por un accidente, fue lento para responder.',
                 references: 'Amigo de dani, dani dice q es un genio, un Better call saul argento, listo para cagar a tu adversario, si le escribes, escribele de parte de dani'
+            },
+            {
+                name: 'Dr Ivan T Verá',
+                address: 'todo por el wasaaa',
+                phone: '11 5329-4656',
+                economicLevel: 6, // Nivel económico del 1 al 10, se representará con 6 símbolos de $
+                history: 'lleva el caso del accidente de andrea, todo un criminal, te infla los presupuestos mas que la inflacion, responde los mensajer rapido, quiere atender tu caso, le gusta la platica.',
+                references: 'Andrea, aun no le han pagado nada pero no tiene otro abogado aquien referir'
             }
         ],
         'Mecánicos': [
