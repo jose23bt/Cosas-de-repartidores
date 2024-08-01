@@ -23,12 +23,12 @@ const Directorio = () => {
   const categories = {
     'Abogados': [
       {
-        name: 'Chanta 1',
-        address: 'La concha del pato',
-        phone: '666',
-        economicLevel: 6, // Nivel económico del 1 al 10, se representará con 6 símbolos de $
-        history: 'Un locura',
-        references: 'El Joseito'
+        name: 'Edu',
+        address: 'Vélez Sársfield 2437',
+        phone: '11 5623-5039',
+        economicLevel: 4, // Nivel económico del 1 al 10, se representará con 6 símbolos de $
+        history: 'Todos hemos ido ahi, hace la chamba, te atiende bien pero ojo que puede fallar o robar jaja nahhh mentira pero pilas',
+        references: 'Su primer cliente, el samu. luego daniel se sintio celoso y lo desplazo y ahora es su amante y fan 1ro.'
       }
     ],
     'Mecánicos': [],
