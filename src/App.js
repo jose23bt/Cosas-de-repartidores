@@ -9,6 +9,7 @@ import LoanPage from './pages/LoanPage/LoanPage';
 import FAQ from './pages/FAQ/FAQ';
 import CheckoutPage from './components/Checkout/CheckoutPage';
 import EarningsCalculator from './pages/Pagos/Pagos';
+import Directorio from './pages/Directorio/Directorio';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/Pagos" element={<EarningsCalculator />} />
+            <Route path="/Directorio" element={<Directorio />} />
           </Routes>
         </main>
         <Footer />
