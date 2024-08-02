@@ -12,6 +12,7 @@ import EarningsCalculator from './pages/Pagos/Pagos';
 import Directorio from './pages/Directorio/Directorio';
 import Leyes from './pages/Leyes/Leyes';
 import DeliveryCalculator from './pages/Pagos/PagosManual';
+import Fake from './pages/Fake/Fake';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/SimuladorManual" element={<DeliveryCalculator />} />
             <Route path="/Directorio" element={<Directorio />} />
             <Route path="/Leyes" element={<Leyes />} />
+            <Route path="/Fake" element={<Fake />} />
           </Routes>
         </main>
         <Footer />

@@ -1,0 +1,83 @@
+/* Estilos para la barra de navegación */
+.MuiAppBar-root {
+    background-color: #fff; /* Fondo blanco para la barra de navegación */
+    box-shadow: 0px 5px 2px -2px gray; /* Sombra en la parte inferior */
+    z-index: 1200; /* Asegurarse de que esté por encima de otros elementos */
+  }
+  
+  /* Estilos para la barra de pedido */
+  .order-bar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 15px -2px rgb(189, 189, 189); /* Sombra para destacar el componente */
+    z-index: 1100; /* Asegurarse de que esté debajo de la barra de navegación */
+    position: relative;
+  }
+  
+  .order-bar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .order-bar-store {
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre el nombre del local y los iconos */
+    border: none; /* Eliminar el borde del input */
+    background: none; /* Eliminar el fondo del input */
+    padding: 0; /* Eliminar el padding */
+    font-size: 1rem; /* Ajusta el tamaño del texto aquí */
+    color: #000; /* Color negro para el texto */
+    cursor: text; /* Cursor de texto para indicar que es editable */
+  }
+  
+  .order-bar-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-bar-number {
+    background-color: white; /* Fondo blanco por defecto */
+    color: black; /* Texto negro por defecto */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 10px; /* Espacio entre la parte superior y el número del pedido */
+    font-weight: bold;
+    font-size: 1rem; /* Ajusta el tamaño del texto aquí */
+    border: none; /* Eliminar el borde */
+    cursor: text; /* Cursor de texto para indicar que es editable */
+    display: inline-block;
+  }
+  
+  /* Estilo para la tarjeta de detalle */
+.card-detail {
+    border-radius: 20px; /* Borde redondeado pronunciado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px; /* Margen alrededor de la tarjeta */
+  }
+  
+  /* Opcional: Estilo adicional para el contenido de la tarjeta */
+  .card-detail-content {
+    padding: 16px; /* Espaciado interno */
+  }
+  
+  /* Opcional: Estilo para el título de la tarjeta */
+  .card-detail-title {
+    font-weight: bold;
+    margin-bottom: 16px; /* Espaciado debajo del título */
+  }
+  
+  /* Opcional: Estilo para los campos dentro de la tarjeta */
+  .card-detail-field {
+    margin-bottom: 16px; /* Espaciado debajo de cada campo */
+  }
+  
+  /* Opcional: Estilo para los botones dentro de la tarjeta */
+  .card-detail-button {
+    width: 100%; /* Botón de ancho completo */
+    border-radius: 20px; /* Bordes redondeados del botón */
+  }
+  

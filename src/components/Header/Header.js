@@ -28,6 +28,7 @@ const Header = () => {
                         <li><NavLink to="/Pagos" activeClassName="active" onClick={closeMenu}>Simulador de Ganancias</NavLink></li>
                         <li><NavLink to="/SimuladorManual" activeClassName="active" onClick={closeMenu}>Simulador de Ganancias Manual</NavLink></li>
                         <li><NavLink to="/faq" activeClassName="active" onClick={closeMenu}>FAQ</NavLink></li>
+                        <li><NavLink to="/Fake" activeClassName="active" onClick={closeMenu}>Fake</NavLink></li>
                     </ul>
                 </nav>
                 <button className="menu-toggle" onClick={toggleMenu}>
