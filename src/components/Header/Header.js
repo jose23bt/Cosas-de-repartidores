@@ -22,10 +22,11 @@ const Header = () => {
                 <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                     <ul>
                         <li><NavLink to="/" exact="true" activeClassName="active" onClick={closeMenu}>Inicio</NavLink></li>
-                        <li><NavLink to="/blog" activeClassName="active" onClick={closeMenu}>Blog</NavLink></li>
+                        <li><NavLink to="/Leyes" activeClassName="active" onClick={closeMenu}>Leyes</NavLink></li>
                         <li><NavLink to="/Directorio" activeClassName="active" onClick={closeMenu}>Directorio</NavLink></li>
                         {/*<li><NavLink to="/loans" activeClassName="active" onClick={closeMenu}>Adelantos</NavLink></li>*/}
                         <li><NavLink to="/Pagos" activeClassName="active" onClick={closeMenu}>Simulador de Ganancias</NavLink></li>
+                        <li><NavLink to="/SimuladorManual" activeClassName="active" onClick={closeMenu}>Simulador de Ganancias Manual</NavLink></li>
                         <li><NavLink to="/faq" activeClassName="active" onClick={closeMenu}>FAQ</NavLink></li>
                     </ul>
                 </nav>

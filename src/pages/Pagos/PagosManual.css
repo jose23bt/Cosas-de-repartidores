@@ -1,0 +1,132 @@
+/* Estilos para DeliveryCalculator */
+
+/* Contenedor principal del componente */
+.delivery-calculator {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Títulos */
+.delivery-calculator h1,
+.delivery-calculator h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Sección de formularios */
+.delivery-calculator .form-section {
+    margin-bottom: 20px;
+}
+
+.delivery-calculator label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.delivery-calculator select,
+.delivery-calculator input[type="number"],
+.delivery-calculator button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.delivery-calculator select,
+.delivery-calculator input[type="number"] {
+    background-color: #f9f9f9;
+}
+
+.delivery-calculator button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delivery-calculator button:hover {
+    background-color: #0056b3;
+}
+
+.delivery-calculator button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Botón para desplegar el formulario */
+.toggle-form-btn {
+    margin-bottom: 20px;
+}
+
+/* Botón para eliminar todos los viajes */
+.remove-all-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 20px;
+}
+
+.remove-all-btn:hover {
+    background-color: #c82333;
+}
+
+/* Lista de viajes */
+.delivery-calculator ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.delivery-calculator li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-calculator li button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.delivery-calculator li button:hover {
+    color: #cc0000;
+}
+
+/* Tarjeta de desglose */
+.delivery-calculator .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.delivery-calculator .card p {
+    margin: 5px 0;
+}
+
+.delivery-calculator .card p:last-child {
+    font-weight: 600;
+}

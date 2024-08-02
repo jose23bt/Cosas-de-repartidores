@@ -10,6 +10,8 @@ import FAQ from './pages/FAQ/FAQ';
 import CheckoutPage from './components/Checkout/CheckoutPage';
 import EarningsCalculator from './pages/Pagos/Pagos';
 import Directorio from './pages/Directorio/Directorio';
+import Leyes from './pages/Leyes/Leyes';
+import DeliveryCalculator from './pages/Pagos/PagosManual';
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/Pagos" element={<EarningsCalculator />} />
+            <Route path="/SimuladorManual" element={<DeliveryCalculator />} />
             <Route path="/Directorio" element={<Directorio />} />
+            <Route path="/Leyes" element={<Leyes />} />
           </Routes>
         </main>
         <Footer />

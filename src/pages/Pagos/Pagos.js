@@ -165,7 +165,7 @@ const EarningsCalculator = () => {
   
   return (
     <div className="calculator-container">
-      <h2>Calculadora de Ganancias</h2>
+      <h2>Calculadora de Ganancias automatico</h2>
       <div className="calculator-content">
         <div className="options-container card">
           <div className="input-group horizontal-group">

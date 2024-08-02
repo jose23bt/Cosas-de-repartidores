@@ -15,7 +15,8 @@
   gap: 20px;
 }
 
-.options-container {
+.options-container {  
+  min-width: 50%;
   max-width: 800px;
   margin: auto;
   display: flex;
@@ -117,7 +118,7 @@
 
   .options-container,
   .earnings {
-    margin-right: 0;
+    
     margin-bottom: 20px;
   }
 
