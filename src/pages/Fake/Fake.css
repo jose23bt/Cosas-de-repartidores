@@ -2,18 +2,18 @@
 .MuiAppBar-root {
     background-color: #fff; /* Fondo blanco para la barra de navegación */
     box-shadow: 0px 5px 2px -2px gray; /* Sombra en la parte inferior */
-    z-index: 1200; /* Asegurarse de que esté por encima de otros elementos */
+        
   }
   
   /* Estilos para la barra de pedido */
   .order-bar {
-    background-color: white;
+    background-color: transparent;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 15px -2px rgb(189, 189, 189); /* Sombra para destacar el componente */
-    z-index: 1100; /* Asegurarse de que esté debajo de la barra de navegación */
+    box-shadow: 0px 5px 15px -2px rgb(209, 209, 209); /* Sombra para destacar el componente */
     position: relative;
+    
   }
   
   .order-bar-top {
@@ -72,12 +72,27 @@
   
   /* Opcional: Estilo para los campos dentro de la tarjeta */
   .card-detail-field {
-    margin-bottom: 16px; /* Espaciado debajo de cada campo */
+    margin-bottom: 20px; /* Espaciado debajo de cada campo */
+  } 
+ 
+  
+  .CardMain {
+    background-color: rgb(233, 233, 233);
+    padding: 5px;    
   }
   
-  /* Opcional: Estilo para los botones dentro de la tarjeta */
+  .card-detail {  
+    background-color: white;        
+  }
+  
+  .card-detail-button-container {    
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 16px; /* Ajusta el margen superior según sea necesario */
+  }
+  
   .card-detail-button {
-    width: 100%; /* Botón de ancho completo */
-    border-radius: 20px; /* Bordes redondeados del botón */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 90%; /* Establece un ancho máximo para el botón */
   }
-  
