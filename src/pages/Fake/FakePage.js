@@ -8,8 +8,8 @@ import CardDetail from './CardDetail';
 
 const Fake = () => {
   const [selected, setSelected] = useState(false);
-  const [orderNumber, setOrderNumber] = useState('#4938');
-  const [storeName, setStoreName] = useState('Nombre del Local');
+  const [orderNumber, setOrderNumber] = useState('');
+  const [storeName, setStoreName] = useState('');
 
   const handleSelect = () => {
     setSelected(!selected);
