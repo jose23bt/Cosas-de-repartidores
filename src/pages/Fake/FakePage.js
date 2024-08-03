@@ -10,31 +10,15 @@ const Fake = () => {
   const [selected, setSelected] = useState(false);
   const [orderNumber, setOrderNumber] = useState('#4938');
   const [storeName, setStoreName] = useState('Nombre del Local');
-  const [orderDetailNumber, setOrderDetailNumber] = useState('');
-  const [customerName, setCustomerName] = useState('');
-  const [items, setItems] = useState([]);
 
   const handleSelect = () => {
     setSelected(!selected);
   };
 
   const handleStoreNameChange = (event) => {
-    setStoreName(event.target.value);
-  };
+    setStoreName(event.target.value);  };
 
-  const handleOrderDetailNumberChange = (event) => {
-    setOrderDetailNumber(event.target.value);
-  };
 
-  const handleCustomerNameChange = (event) => {
-    setCustomerName(event.target.value);
-  };
-
-  const handleItemChange = (index, field, value) => {
-    const newItems = [...items];
-    newItems[index] = { ...newItems[index], [field]: value };
-    setItems(newItems);
-  };
 
   return (
     <div>
@@ -73,14 +57,7 @@ const Fake = () => {
       </div>
       {/*card main*/}
       <Box className="CardMain">
-        <CardDetail
-          orderDetailNumber={orderDetailNumber}
-          customerName={customerName}
-          items={items}
-          handleOrderDetailNumberChange={handleOrderDetailNumberChange}
-          handleCustomerNameChange={handleCustomerNameChange}
-          handleItemChange={handleItemChange}
-        />
+        <CardDetail />
       <div className="card-detail-button-container">
         <Button
           variant="contained"
