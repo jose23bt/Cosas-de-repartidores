@@ -7,8 +7,7 @@ import './Fake.css';
 import CardDetail from './CardDetail';
 
 const Fake = () => {
-  const [selected, setSelected] = useState(false);
-  const [orderNumber, setOrderNumber] = useState('');
+  const [selected, setSelected] = useState(false);  
   const [storeName, setStoreName] = useState('');
 
   const handleSelect = () => {
@@ -44,14 +43,6 @@ const Fake = () => {
                 <MapOutlinedIcon style={{ color: 'red' }} />
               </IconButton>
             </div>
-          </div>
-          <div
-            className={`order-bar-number ${selected ? 'selected' : ''}`}
-            onInput={(e) => setOrderNumber(e.currentTarget.textContent || '')}
-            contentEditable
-            suppressContentEditableWarning
-          >
-            {orderNumber}
           </div>
         </div>
       </div>

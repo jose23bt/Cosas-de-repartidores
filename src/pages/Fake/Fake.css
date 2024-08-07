@@ -88,7 +88,8 @@
   .card-detail-button-container {    
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    margin-top: 16px; /* Ajusta el margen superior según sea necesario */
+    margin-top: 16px;
+    margin-bottom: 50px; /* Ajusta el margen superior según sea necesario */
   }
   
   .card-detail-button {
