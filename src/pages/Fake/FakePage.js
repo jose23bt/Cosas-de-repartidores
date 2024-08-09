@@ -1,31 +1,27 @@
 import React, { useState } from 'react';
-import { Button, Box, IconButton,} from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
-import HeaderFake from './headerDetail/HeaderFake'; // Importa el componente HeaderFake
+import HeaderFake from './headerDetail/HeaderFake';
 import './Fake.css';
 import CardDetail from './cardDetail/CardDetail';
 
+
 const Fake = () => {
-  const [selected, setSelected] = useState(false);  
+  const [selected, setSelected] = useState(false);
   const [storeName, setStoreName] = useState('');
 
-  const handleSelect = () => {
-    setSelected(!selected);
-  };
 
-  const handleStoreNameChange = (event) => {
-    setStoreName(event.target.value);  };
+  const handleSelect = () => setSelected(!selected);
+  const handleStoreNameChange = (event) => setStoreName(event.target.value);
 
+ 
 
-
+ 
   return (
     <div>
-      <HeaderFake /> 
-      <div
-        className={`order-bar ${selected ? 'selected' : ''}`}
-        onClick={handleSelect}
-      >
+      <HeaderFake />
+      <div className={`order-bar ${selected ? 'selected' : ''}`} onClick={handleSelect}>
         <div className="order-bar-content">
           <div className="order-bar-top">
             <input
@@ -46,25 +42,14 @@ const Fake = () => {
           </div>
         </div>
       </div>
-      {/*card main*/}
       <Box className="CardMain">
-        <CardDetail />
-      <div className="card-detail-button-container">
-        <Button
-          variant="contained"
-          color="error"
-          className="card-detail-button"
-        >
-          Confirmar Retiro
-        </Button>
-      </div>
+        <CardDetail />     
+        
       </Box>
+      
     </div>
   );
 };
 
 export default Fake;
-
-
-
 

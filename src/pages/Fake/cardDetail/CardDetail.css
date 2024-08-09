@@ -1,0 +1,6 @@
+.card-detail-button {
+    text-transform: none;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 90%; /* Establece un ancho máximo para el botón */
+}
