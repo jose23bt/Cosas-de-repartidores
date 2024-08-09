@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Button, Box, IconButton,} from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
-import HeaderFake from './HeaderFake'; // Importa el componente HeaderFake
+import HeaderFake from './headerDetail/HeaderFake'; // Importa el componente HeaderFake
 import './Fake.css';
-import CardDetail from './CardDetail';
+import CardDetail from './cardDetail/CardDetail';
 
 const Fake = () => {
   const [selected, setSelected] = useState(false);  
