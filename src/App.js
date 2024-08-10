@@ -13,6 +13,7 @@ import Directorio from './pages/Directorio/Directorio';
 import Leyes from './pages/Leyes/Leyes';
 import DeliveryCalculator from './pages/Pagos/PagosManual';
 import Fake from './pages/Fake/FakePage';
+import FakeFrontEnd from './pages/Fake/FakeFrontEnd/FakeFrontEnd';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Directorio" element={<Directorio />} />
             <Route path="/Leyes" element={<Leyes />} />
             <Route path="/FakePage" element={<Fake />} />
+            <Route path="/FakeFrontEnd" element={<FakeFrontEnd />} />
           </Routes>
         </main>
         <Footer />

@@ -5,6 +5,7 @@ import MoodBadIcon from '@mui/icons-material/MoodBad';
 import MoodIcon from '@mui/icons-material/Mood';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './CardDetail.css'; // Asegúrate de importar el archivo CSS
 
 const CardDetail = ({ handleOrderDetailNumberChange }) => {
@@ -13,6 +14,8 @@ const CardDetail = ({ handleOrderDetailNumberChange }) => {
     const [items, setItems] = useState([{ name: '1 Hamburguesa', price: '13,900.00' }]);
     const [isExpanded, setIsExpanded] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
+
+    const navigate = useNavigate(); // Inicializa useNavigate
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
@@ -35,6 +38,8 @@ const CardDetail = ({ handleOrderDetailNumberChange }) => {
     const handleConfirmRetiro = () => {
         // Lógica para confirmar el retiro
         setModalOpen(false);
+        // Navega al componente fakefrontend
+        navigate('/fakefrontend');
     };
 
     return (
