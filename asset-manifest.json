@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cosas-de-repartidores/static/css/main.59f88585.css",
-    "main.js": "/Cosas-de-repartidores/static/js/main.70436ae0.js",
+    "main.js": "/Cosas-de-repartidores/static/js/main.f2e45bf9.js",
     "static/js/453.c981ca85.chunk.js": "/Cosas-de-repartidores/static/js/453.c981ca85.chunk.js",
     "index.html": "/Cosas-de-repartidores/index.html",
     "main.59f88585.css.map": "/Cosas-de-repartidores/static/css/main.59f88585.css.map",
-    "main.70436ae0.js.map": "/Cosas-de-repartidores/static/js/main.70436ae0.js.map",
+    "main.f2e45bf9.js.map": "/Cosas-de-repartidores/static/js/main.f2e45bf9.js.map",
     "453.c981ca85.chunk.js.map": "/Cosas-de-repartidores/static/js/453.c981ca85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59f88585.css",
-    "static/js/main.70436ae0.js"
+    "static/js/main.f2e45bf9.js"
   ]
 }
