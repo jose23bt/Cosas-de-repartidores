@@ -54,3 +54,20 @@
     color: #333;
   }
   
+  /* Banner CSS */
+.banner-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.banner {
+  width: 100%;
+  max-width: 350px; /* Hacemos el banner más pequeño */
+  animation: blink 3s steps(1) infinite; /* Más rápido y con un efecto de titilar más notable */
+}
+
+/* Animación de titilar */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
