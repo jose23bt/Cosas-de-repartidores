@@ -54,7 +54,8 @@ const Directorio = () => {
                 phone: '11 6583-8203',
                 economicLevel: 2, // Nivel económico del 1 al 10, se representará con 6 símbolos de $
                 history: 'Yube lleva su moto alli, odia a edu, dice q trabaja bien pero le da miedo recomendarlo, Eze obedece a yube y tambien la lleva ahi',
-                references: 'aun que yube no quiere ella es la unica referencia y dice que es el mejor mecanico de todos los tiempos (yube dice que si le sale mal la recomendacion mamenlo)'
+                references: 'aun que yube no quiere ella es la unica referencia y dice que es el mejor mecanico de todos los tiempos (yube dice que si le sale mal la recomendacion mamenlo)',
+                references: 'Jose la llevo y la moto quedo bien, pero el cobro fue... bueno este articulo es redactado por jose y el mismo aun no se recupera del daño psicologico que le hizo el pago de esos honorarios, por lo cual ni nada gracioso se le ocurre, si no tienes plata no vayas, (edu te caga pero no te roba tan rapido)'
             }
         ],
         'Tiendas': [],
