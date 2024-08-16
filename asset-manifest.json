@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Cosas-de-repartidores/static/css/main.10fabb98.css",
-    "main.js": "/Cosas-de-repartidores/static/js/main.8648aa4d.js",
+    "main.js": "/Cosas-de-repartidores/static/js/main.142d2734.js",
     "static/js/453.c981ca85.chunk.js": "/Cosas-de-repartidores/static/js/453.c981ca85.chunk.js",
     "static/media/banner.jpg": "/Cosas-de-repartidores/static/media/banner.64b08747525f1e1dd9df.jpg",
     "index.html": "/Cosas-de-repartidores/index.html",
     "main.10fabb98.css.map": "/Cosas-de-repartidores/static/css/main.10fabb98.css.map",
-    "main.8648aa4d.js.map": "/Cosas-de-repartidores/static/js/main.8648aa4d.js.map",
+    "main.142d2734.js.map": "/Cosas-de-repartidores/static/js/main.142d2734.js.map",
     "453.c981ca85.chunk.js.map": "/Cosas-de-repartidores/static/js/453.c981ca85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10fabb98.css",
-    "static/js/main.8648aa4d.js"
+    "static/js/main.142d2734.js"
   ]
 }
