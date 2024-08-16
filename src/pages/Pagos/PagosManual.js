@@ -17,7 +17,7 @@ const DeliveryCalculator = () => {
 
   const [trips, setTrips] = useState([]);
   const [workingHours, setWorkingHours] = useState(0);
-  const [ setShowRandomTrips] = useState(false);
+  const [showRandomTrips, setShowRandomTrips] = useState(false);
   const [showAddTripForm, setShowAddTripForm] = useState(false);
   const [showTripsList, setShowTripsList] = useState(false); // Nuevo estado para controlar la visibilidad de la lista de viajes
 
@@ -97,51 +97,53 @@ const DeliveryCalculator = () => {
   const calculateTripEarnings = (trip) => {
     let pickupFee = 0;
     let deliveryFee = 0;
-
+  
     // Cálculo según el turno y horario
     switch (settings.shiftTime) {
       case 'Mon-Fri-day':
-        pickupFee = 400;
-        deliveryFee = 210;
+        pickupFee = 435;
+        deliveryFee = 225;
         break;
       case 'Mon-Thu-night':
-        pickupFee = 500;
-        deliveryFee = 300;
+        pickupFee = 550;
+        deliveryFee = 345;
         break;
       case 'Fri-Sun-night':
-        pickupFee = 750;
-        deliveryFee = 450;
+        pickupFee = 840;
+        deliveryFee = 515;
         break;
       case 'Sat-Sun-day':
-        pickupFee = 450;
-        deliveryFee = 290;
+        pickupFee = 485;
+        deliveryFee = 310;
         break;
       default:
         break;
     }
-
+  
     let distancePickupFee = 0;
     let distanceDeliveryFee = 0;
-
-    if (trip.distancePickup <= 1.5) distancePickupFee = 120;
-    else if (trip.distancePickup <= 2.5) distancePickupFee = 150;
-    else if (trip.distancePickup <= 4) distancePickupFee = 185;
-    else distancePickupFee = 255;
-
-    if (trip.distanceDelivery <= 1.5) distanceDeliveryFee = 135;
-    else if (trip.distanceDelivery <= 2.5) distanceDeliveryFee = 165;
-    else if (trip.distanceDelivery <= 4) distanceDeliveryFee = 200;
-    else distanceDeliveryFee = 270;
-
+  
+    // Tarifas por kilómetro al punto de retiro
+    if (trip.distancePickup <= 1.5) distancePickupFee = 130;
+    else if (trip.distancePickup <= 2.5) distancePickupFee = 165;
+    else if (trip.distancePickup <= 4) distancePickupFee = 210;
+    else distancePickupFee = 290;
+  
+    // Tarifas por kilómetro al punto de entrega
+    if (trip.distanceDelivery <= 1.5) distanceDeliveryFee = 145;
+    else if (trip.distanceDelivery <= 2.5) distanceDeliveryFee = 180;
+    else if (trip.distanceDelivery <= 4) distanceDeliveryFee = 225;
+    else distanceDeliveryFee = 315;
+  
     const groupAdditions = {
       1: { delivery: 150, distance: 25 },
       2: { delivery: 100, distance: 20 },
       3: { delivery: 70, distance: 12 },
       4: { delivery: 40, distance: 8 },
     };
-
+  
     const groupFee = groupAdditions[settings.group];
-
+  
     return (
       pickupFee +
       deliveryFee +

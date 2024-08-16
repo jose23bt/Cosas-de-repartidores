@@ -14,37 +14,37 @@ const EarningsCalculator = () => {
   const [simulateTips, setSimulateTips] = useState(false);
   const [tips, setTips] = useState(0);
 
-  // Tarifas básicas según el día y la noche
-  const rates = {
-    weekdayDay: { pickup: 360, delivery: 170 },
-    weekdayNight: { pickup: 460, delivery: 240 },
-    weekendNight: { pickup: 670, delivery: 370 },
-    weekendDay: { pickup: 400, delivery: 240 },
-  };
+// Tarifas básicas según el día y la noche
+const rates = {
+  weekdayDay: { pickup: 500, delivery: 200 },   // Tarifas actualizadas
+  weekdayNight: { pickup: 550, delivery: 300 }, // Tarifas actualizadas
+  weekendNight: { pickup: 700, delivery: 450 }, // Tarifas actualizadas
+  weekendDay: { pickup: 600, delivery: 350 },   // Tarifas actualizadas
+};
 
-  // Tarifas por kilómetro
-  const kmRates = {
-    toPickup: [
-      { maxKm: 1.5, rate: 120 },
-      { maxKm: 2.5, rate: 150 },
-      { maxKm: 4, rate: 185 },
-      { maxKm: Infinity, rate: 255 },
-    ],
-    toDelivery: [
-      { maxKm: 1.5, rate: 135 },
-      { maxKm: 2.5, rate: 165 },
-      { maxKm: 4, rate: 200 },
-      { maxKm: Infinity, rate: 270 },
-    ],
-  };
+// Tarifas por kilómetro
+const kmRates = {
+  toPickup: [
+    { maxKm: 1.5, rate: 150 },  // Tarifas actualizadas
+    { maxKm: 2.5, rate: 200 },  // Tarifas actualizadas
+    { maxKm: 4, rate: 250 },    // Tarifas actualizadas
+    { maxKm: Infinity, rate: 300 }, // Tarifas actualizadas
+  ],
+  toDelivery: [
+    { maxKm: 1.5, rate: 150 },  // Tarifas actualizadas
+    { maxKm: 2.5, rate: 200 },  // Tarifas actualizadas
+    { maxKm: 4, rate: 250 },    // Tarifas actualizadas
+    { maxKm: Infinity, rate: 300 }, // Tarifas actualizadas
+  ],
+};
 
-  // Tarifas de grupo
-  const groupRates = {
-    1: { delivery: 150, km: 25 },
-    2: { delivery: 100, km: 20 },
-    3: { delivery: 70, km: 12 },
-    4: { delivery: 40, km: 8 },
-  };
+// Tarifas de grupo
+const groupRates = {
+  1: { delivery: 200, km: 50 },  // Tarifas actualizadas
+  2: { delivery: 150, km: 40 },  // Tarifas actualizadas
+  3: { delivery: 100, km: 30 },  // Tarifas actualizadas
+  4: { delivery: 50, km: 20 },   // Tarifas actualizadas
+};
 
   // Función para obtener la tarifa según los kilómetros
   const getRate = (km, rates) => {
